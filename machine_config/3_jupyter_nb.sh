@@ -1,9 +1,9 @@
-sudo pip install -U setuptools pip kaggle-cli
+sudo pip install -U setuptools pip kaggle-cli Seaborn h5py
 sudo pip install -U jupyter numpy scipy scikit-learn matplotlib pandas 
 sudo pip install -U Pillow bcolz h5py tensorflow theano keras
-# Python 3
-# Seaborn
-# 
+sudo pip install -U flask flask-cors
+python -m pip install ipykernel
+python -m ipykernel install --user
 
 echo "[global]
 device = gpu
@@ -25,7 +25,3 @@ jupass=`python -c "from notebook.auth import passwd; print(passwd())"`
 echo "c.NotebookApp.password = u'"$jupass"'" >> $HOME/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False" >> $HOME/.jupyter/jupyter_notebook_config.py
-
-# Python 2 kernel
-# python3 -m pip install ipykernel
-# python3 -m ipykernel install --user
